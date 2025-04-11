@@ -1,50 +1,38 @@
-import Link from 'next/link';
+import Header from '../app/components/header';
+import '../app/styles/globals.css';
+import '../app/styles/homepage.css';
 
 export default function HomePage() {
-    return (
+  return (
+    <>
+      <Header />
       <div className="font-sans text-gray-800">
-        {/* Header */}
-        <header className="bg-white shadow-md sticky top-0 z-50">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 className="text-2xl font-bold text-blue-600">MyOrderSys</h1>
-            <nav className="hidden md:flex space-x-6 font-medium">
-              <a href="#" className="hover:text-blue-600">Home</a>
-              <a href="#products" className="hover:text-blue-600">Products</a>
-              <a href="#contact" className="hover:text-blue-600">Contact</a>
-            </nav>
-            <div className="flex items-center gap-4">
-              <a href="#cart" className="relative">
-                🛒
-                <span className="absolute -top-2 -right-2 text-xs bg-red-500 text-white rounded-full px-1">2</span>
-              </a>
-              <Link href="/login" className="bg-blue-600 text-white px-4 py-1 rounded-md hover:bg-blue-700">
-                Login
-              </Link>
-            </div>
+        <section className="hero-section">
+          <div className="hero-section-overlay">
+            <video className="hero-video" autoPlay loop muted playsInline >
+            <source src="https://res.cloudinary.com/dkpxdp4hy/video/upload/v1744353210/HeroVideo_on5paq.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           </div>
-        </header>
-  
-        {/* Hero Section */}
-        <section className="bg-gray-100 py-20 text-center">
-          <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-4xl font-bold mb-4">Welcome to MyOrderSys</h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Your simple and fast ordering platform. Browse products, place orders, and track them with ease.
-            </p>
-            <a href="#products" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+          <div className="hero-section-content">
+            <h2 className="text-4xl font-bold mb-4 leading-tight">Unlock the Future of Computing with OrderByte</h2>
+            <p className="text-lg mb-6">Your one-stop solution for powerful computers and tech products. Fast shipping, top-tier quality, and the latest tech trends—all in one place.</p>
+            <a href="#products" className="bg-blue-600 text-white px-8 py-3 rounded-lg text-xl hover:bg-blue-700 transition duration-300 shadow-lg transform hover:scale-105">
               Shop Now
             </a>
           </div>
         </section>
-  
+
         {/* Product Preview Section */}
         <section id="products" className="py-16 bg-white">
           <div className="max-w-6xl mx-auto px-4">
-            <h3 className="text-2xl font-bold mb-6">Featured Products</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center text-blue-600">Featured Products</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {[1, 2, 3].map((item) => (
-                <div key={item} className="border rounded-xl p-4 hover:shadow-lg transition">
-                  <div className="h-40 bg-gray-200 rounded mb-4"></div>
+                <div key={item} className="border rounded-xl p-4 hover:shadow-xl transition duration-300 transform hover:scale-105">
+                  <div className="h-40 bg-gray-200 rounded mb-4">
+                    <img src={`https://example.com/product-${item}.jpg`} alt={`Product ${item}`} className="w-full h-full object-cover rounded" />
+                  </div>
                   <h4 className="text-lg font-semibold mb-2">Product {item}</h4>
                   <p className="text-gray-600 mb-2">Short product description goes here.</p>
                   <span className="font-bold text-blue-600">$19.99</span>
@@ -54,6 +42,6 @@ export default function HomePage() {
           </div>
         </section>
       </div>
-    );
-  }
-  
+    </>
+  );
+}

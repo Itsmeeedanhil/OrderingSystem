@@ -1,0 +1,82 @@
+/* Hero Section Styles */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Fallback color */
+  }
+  
+  .hero-section-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for text visibility */
+    z-index: 1;
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%); /* Center the video */
+    z-index: 0; /* Behind the content */
+  }
+  
+  .hero-section-content {
+    position: relative;
+    z-index: 2; /* On top of the video and overlay */
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .hero-section-content h2 {
+    font-size: 3rem; /* Adjust the size of the heading */
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+  
+  .hero-section-content p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero-section-content a {
+    padding: 12px 30px;
+    background-color: #3182ce; /* Blue */
+    color: white;
+    font-size: 1.125rem;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .hero-section-content a:hover {
+    background-color: #2b6cb0; /* Darker blue */
+    transform: scale(1.05);
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .hero-section-content h2 {
+      font-size: 2rem;
+    }
+  
+    .hero-section-content p {
+      font-size: 1rem;
+    }
+  
+    .hero-section-content a {
+      font-size: 1rem;
+    }
+  }
+  

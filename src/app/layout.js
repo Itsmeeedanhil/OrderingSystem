@@ -1,4 +1,4 @@
-import './globals.css';
+import '../app/styles/globals.css';
 
 export default function DashboardLayout({ children }) {
     return (
