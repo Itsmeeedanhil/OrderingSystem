@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function HomePage() {
     return (
       <div className="font-sans text-gray-800">
@@ -15,7 +17,9 @@ export default function HomePage() {
                 🛒
                 <span className="absolute -top-2 -right-2 text-xs bg-red-500 text-white rounded-full px-1">2</span>
               </a>
-              <a href="#login" className="bg-blue-600 text-white px-4 py-1 rounded-md hover:bg-blue-700">Login</a>
+              <Link href="/login" className="bg-blue-600 text-white px-4 py-1 rounded-md hover:bg-blue-700">
+                Login
+              </Link>
             </div>
           </div>
         </header>
