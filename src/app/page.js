@@ -23,24 +23,28 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Product Preview Section */}
-        <section id="products" className="py-16 bg-white">
-          <div className="max-w-6xl mx-auto px-4">
-            <h3 className="text-2xl font-bold mb-6 text-center text-blue-600">Featured Products</h3>
+        {/* Hero Section - Popular Categories */}
+        <section id="categories" className="relative py-16 bg-gradient-to-r from-blue-50 to-white h-screen">
+          <div className="absolute inset-0 bg-cover bg-center opacity-30" style={{ backgroundImage: "url('https://example.com/hero-bg.jpg')" }}></div>
+          <div className="max-w-6xl mx-auto px-4 relative z-10">
+            <h3 className="text-4xl font-bold text-center text-black mb-6 animate__animated animate__fadeInUp">Popular Categories</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {[1, 2, 3].map((item) => (
-                <div key={item} className="border rounded-xl p-4 hover:shadow-xl transition duration-300 transform hover:scale-105">
-                  <div className="h-40 bg-gray-200 rounded mb-4">
-                    <img src={`https://example.com/product-${item}.jpg`} alt={`Product ${item}`} className="w-full h-full object-cover rounded" />
+                <div key={item} className="border-2 border-blue-200 rounded-xl p-6 hover:shadow-2xl hover:bg-blue-50 transition duration-300 transform hover:scale-105">
+                  <div className="h-40 bg-gray-200 rounded-lg overflow-hidden mb-4">
+                    <img src={`https://example.com/category-${item}.jpg`} alt={`Category ${item}`} className="w-full h-full object-cover transform group-hover:scale-110 transition duration-300" />
                   </div>
-                  <h4 className="text-lg font-semibold mb-2">Product {item}</h4>
-                  <p className="text-gray-600 mb-2">Short product description goes here.</p>
-                  <span className="font-bold text-blue-600">$19.99</span>
+                  <h4 className="text-2xl font-semibold mb-2 text-gray-800">Category {item}</h4>
+                  <p className="text-gray-600 mb-4">Explore a variety of products and services under this category.</p>
+                  <button className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-blue-700 transition">Explore Now</button>
                 </div>
               ))}
             </div>
           </div>
         </section>
+
+
+
       </div>
     </>
   );
