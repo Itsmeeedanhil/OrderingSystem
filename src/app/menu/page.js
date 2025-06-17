@@ -12,7 +12,7 @@ export default function ProductsPage() {
 
   return (
     <>
-      {/* Include Header component outside the main div */}
+      {/* Include Header component outside the main div1232131 */}
       <Header />
 
       <div className="min-h-screen bg-white py-16 px-4">
