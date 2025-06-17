@@ -25,6 +25,9 @@ export default function Header() {
           <Link href="/contact" className="hover:text-blue-600">
             Contact
           </Link>
+          <Link href="/orders" className="hover:text-blue-600">
+            Order
+          </Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
